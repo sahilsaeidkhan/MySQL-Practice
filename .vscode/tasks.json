@@ -2,14 +2,25 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run first.sql in MySQL",
+      "label": "Run practice.sql in MySQL (configured)",
+      "type": "process",
+      "command": "C:/Program Files/MySQL/MySQL Server 8.0/bin/mysql.exe",
+      "args": [
+        "-uroot",
+        "-p89348",
+        "--execute=source ${workspaceFolder}/practice.sql"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run practice.sql in MySQL (prompt)",
       "type": "process",
       "command": "C:/Program Files/MySQL/MySQL Server 8.0/bin/mysql.exe",
       "args": [
         "-u",
         "${input:mysqlUser}",
         "-p${input:mysqlPassword}",
-        "--execute=source ${workspaceFolder}/first.sql"
+        "--execute=source ${workspaceFolder}/practice.sql"
       ],
       "problemMatcher": []
     }

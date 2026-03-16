@@ -1,46 +1,20 @@
 {
     "sqltools.connections": [
         {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "ssh": "Disabled",
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "MySQL Local",
-            "database": "practice_db",
-            "username": "root"
-        },
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "ssh": "Disabled",
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
             "name": "MySQL-Practice",
-            "username": "root",
-            "database": "practice_db"
-        },
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "ssh": "Disabled",
-            "previewLimit": 50,
+            "driver": "MySQL",
             "server": "localhost",
             "port": 3306,
-            "driver": "MySQL",
             "database": "mysql",
             "username": "root",
-            "name": "MySQL-Practice"
+            "password": "89348",
+            "previewLimit": 50,
+            "ssh": "Disabled",
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            }
         }
-    ]
+    ],
+    "sqltools.autoConnectTo": "MySQL-Practice"
 }
