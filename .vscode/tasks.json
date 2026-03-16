@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run first.sql in MySQL",
+      "type": "process",
+      "command": "C:/Program Files/MySQL/MySQL Server 8.0/bin/mysql.exe",
+      "args": [
+        "-u",
+        "${input:mysqlUser}",
+        "-p${input:mysqlPassword}",
+        "--execute=source ${workspaceFolder}/first.sql"
+      ],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "mysqlUser",
+      "type": "promptString",
+      "description": "MySQL username",
+      "default": "root"
+    },
+    {
+      "id": "mysqlPassword",
+      "type": "promptString",
+      "description": "MySQL password",
+      "password": true
+    }
+  ]
+}
